@@ -21,5 +21,5 @@ run: ${OUT_FILES}
 out/hello-roc.out: src/hello-roc.roc
 	@roc repl < $< | ${STRIP} > $@
 
-out/run-repl.out: src/run-repl.roc
-	@roc repl < $< > $@
+out/number-3.out: src/number-3.roc
+	@roc repl < $< | ${STRIP} > $@

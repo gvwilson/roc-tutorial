@@ -23,6 +23,17 @@
 -   Roc cares a *lot* about types
 
 <!-- ---------------------------------------------------------------- -->
+[% section_break class="topic" title="Numbers" %]
+
+[% multi "src/number-3.roc" "out/number-3.out" %]
+
+-   3 is a `Num *`
+    -   `Num` is short for "number"
+    -   `*` means this is a [%g wildcard_type "wildcard type" %]
+-   Compatible with more specific numeric types `Int` and `Frac`
+-   We're going to see a lot of wildcards
+
+<!-- ---------------------------------------------------------------- -->
 [% section_break class="aside" title="Appendices" %]
 
 ### Terms
