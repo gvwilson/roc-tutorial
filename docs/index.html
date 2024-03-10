@@ -40,7 +40,7 @@
 <h2 class="aside">What This Is</h2>
 <ul>
 <li>Notes and working examples that instructors can use to perform a lesson<ul>
-<li>Do <em>not</em> expect novices with no prior <a href="https://www.roc-lang.org/">Roc</a> experience to be able to learn from them</li>
+<li>Do <em>not</em> expect novices with no prior <a href="https://www.roc-lang.org/">Roc</a> experience to learn from them on their own</li>
 </ul>
 </li>
 <li>Musical analogy<ul>
@@ -52,6 +52,28 @@
     the <a href="./conduct/">Code of Conduct</a> for community standards,
     and <a href="./contributing/">these guidelines</a> for notes on contributing</li>
 <li><a href="https://third-bit.com/">Greg Wilson</a> is a programmer, author, and educator based in Toronto</li>
+</ul>
+<!-- ---------------------------------------------------------------- -->
+</section>
+<section class="topic">
+<h2 class="topic">1: Hello Roc</h2>
+<ul>
+<li>Run <code>roc repl</code> at the command line</li>
+<li>Character string evaluates to itself</li>
+</ul>
+<p class="inclusion"><a href="src/hello-roc.roc">src/hello-roc.roc</a></p>
+<div class="language-roc">
+<div class="highlight"><pre><span></span><code>&quot;Hello, Roc&quot;
+</code></pre></div>
+</div>
+<p class="inclusion"><a href="out/hello-roc.out">out/hello-roc.out</a></p>
+<div class="language-plaintext">
+<div class="highlight"><pre><span></span><code>&quot;Hello, Roc&quot; : Str
+</code></pre></div>
+</div>
+<ul>
+<li>The <code>Str</code> after the colon tells us the type of the value</li>
+<li>Roc cares a <em>lot</em> about types</li>
 </ul>
 <!-- ---------------------------------------------------------------- -->
 </section>
@@ -77,7 +99,7 @@
   <a href="license/"><i class="fab fa-creative-commons-by" aria-hidden="true" title="license"></i></a>
   &middot;
   <i class="fas fa-clock"></i>
-  <time datetime="2024-03-08">Last built 2024-03-08</time>
+  <time datetime="2024-03-10">Last built 2024-03-10</time>
   &middot;
   <i class="fas fa-user-check"></i> 100% human content
 </footer>
