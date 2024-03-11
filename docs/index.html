@@ -153,6 +153,60 @@
 </ul>
 <!-- ---------------------------------------------------------------- -->
 </section>
+<section class="topic">
+<h2 class="topic">5: Functions</h2>
+<p class="inclusion"><a href="src/call-max.roc">src/call-max.roc</a></p>
+<div class="language-roc">
+<div class="highlight"><pre><span></span><code>Num.max 3 5
+</code></pre></div>
+</div>
+<p class="inclusion"><a href="out/call-max.out">out/call-max.out</a></p>
+<div class="language-plaintext">
+<div class="highlight"><pre><span></span><code>5 : Num *
+</code></pre></div>
+</div>
+<ul>
+<li>Don&rsquo;t need parentheses…</li>
+<li>…except to disambiguate</li>
+</ul>
+<p class="inclusion"><a href="src/call-max-add.roc">src/call-max-add.roc</a></p>
+<div class="language-roc">
+<div class="highlight"><pre><span></span><code>Num.max 5 3 + 2
+Num.max 5 (3 + 2)
+</code></pre></div>
+</div>
+<p class="inclusion"><a href="out/call-max-add.out">out/call-max-add.out</a></p>
+<div class="language-plaintext">
+<div class="highlight"><pre><span></span><code>7 : Num *
+
+5 : Num *
+</code></pre></div>
+</div>
+<ul>
+<li>Consider:</li>
+</ul>
+<p class="inclusion"><a href="src/nested-func-call.roc">src/nested-func-call.roc</a></p>
+<div class="language-roc">
+<div class="highlight"><pre><span></span><code>Str.concat &quot;Answer: &quot; Num.max 3 5
+</code></pre></div>
+</div>
+<p class="inclusion"><a href="out/nested-func-call.out">out/nested-func-call.out</a></p>
+<div class="language-plaintext">
+<div class="highlight"><pre><span></span><code>── TOO MANY ARGS ───────────────────────────────────────────────────────────────
+
+The concat function expects 2 arguments, but it got 4 instead:
+
+4│      Str.concat &quot;Answer: &quot; Num.max 3 5
+        ^^^^^^^^^^
+
+Are there any missing commas? Or missing parentheses?
+</code></pre></div>
+</div>
+<ul>
+<li>Looks like we&rsquo;re passing <code>Num.max</code>, 3, and 5 as arguments to <code>Str.concat</code></li>
+</ul>
+<!-- ---------------------------------------------------------------- -->
+</section>
 <section class="aside">
 <h2 class="aside">Appendices</h2>
 <h3>Terms</h3>

@@ -1,0 +1,8 @@
+── TOO MANY ARGS ───────────────────────────────────────────────────────────────
+
+The concat function expects 2 arguments, but it got 4 instead:
+
+4│      Str.concat "Answer: " Num.max 3 5
+        ^^^^^^^^^^
+
+Are there any missing commas? Or missing parentheses?

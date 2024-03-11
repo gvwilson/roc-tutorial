@@ -17,7 +17,7 @@
 -   Run `roc repl` at the command line
 -   Character string evaluates to itself
 
-[% multi "src/hello-roc.roc" "out/hello-roc.out" %]
+[% multi src/hello-roc.roc out/hello-roc.out %]
 
 -   The `Str` after the colon tells us the type of the value
 -   Roc cares a *lot* about types
@@ -25,7 +25,7 @@
 <!-- ---------------------------------------------------------------- -->
 [% section_break class="topic" title="Numbers" %]
 
-[% multi "src/number-3.roc" "out/number-3.out" %]
+[% multi src/number-3.roc out/number-3.out %]
 
 -   3 is a `Num *`
     -   `Num` is short for "number"
@@ -38,21 +38,36 @@
 -   Assigning a value to a name creates a variable
     -   The value of the expression is automatically echoed
 
-[% multi "src/var-def.roc" "out/var-def.out" %]
+[% multi src/var-def.roc out/var-def.out %]
 
 -   But all "variables" are actually constants
 
-[% single "src/var-redef.roc" %]
-[% single "out/var-redef.out" %]
+[% multi src/var-redef.roc out/var-redef.out %]
 
 <!-- ---------------------------------------------------------------- -->
 [% section_break class="topic" title="Arithmetic" %]
 
-[% multi "src/arithmetic.roc" "out/arithmetic.out" %]
+[% multi src/arithmetic.roc out/arithmetic.out %]
 
 -   Roc respects the usual precedence rules for arithmetic
 -   Result is `Frac` because division creates a fractional number
     -   And `Num` combined with `Frac` is `Frac`
+
+<!-- ---------------------------------------------------------------- -->
+[% section_break class="topic" title="Functions" %]
+
+[% multi src/call-max.roc out/call-max.out %]
+
+-   Don't need parentheses…
+-   …except to disambiguate
+
+[% multi src/call-max-add.roc out/call-max-add.out %]
+
+-   Consider:
+
+[% multi src/nested-func-call.roc out/nested-func-call.out %]
+
+-   Looks like we're passing `Num.max`, 3, and 5 as arguments to `Str.concat`
 
 <!-- ---------------------------------------------------------------- -->
 [% section_break class="aside" title="Appendices" %]

@@ -1,10 +1,12 @@
+import re
 import sys
 
 MARKER = ":q to quit."
+ESCAPE = re.compile(r'\x1b\[.+?m')
 
 text = sys.stdin.read()
 loc = text.find(MARKER)
 assert loc >= 0
 text = text[loc + len(MARKER):].strip()
-text = text.replace("\x1b[1;32m", "").replace("\x1b[0m", "")
+text = ESCAPE.sub("", text)
 print(text)
