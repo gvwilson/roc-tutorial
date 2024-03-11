@@ -18,32 +18,8 @@ release:
 .PHONY: run
 run: ${OUT_FILES}
 
-out/arithmetic.out: src/arithmetic.roc
+out/interp-%.out: src/interp-%.roc
 	cat $< | roc repl 2>&1 | ${STRIP} > $@
 
-out/call-max.out: src/call-max.roc
-	cat $< | roc repl 2>&1 | ${STRIP} > $@
-
-out/call-max-add.out: src/call-max-add.roc
-	cat $< | roc repl 2>&1 | ${STRIP} > $@
-
-out/hello-roc.out: src/hello-roc.roc
-	cat $< | roc repl 2>&1 | ${STRIP} > $@
-
-out/interpolation.out: src/interpolation.roc
-	cat $< | roc repl 2>&1 | ${STRIP} > $@
-
-out/max3.out: src/max3.roc
-	cat $< | roc repl 2>&1 | ${STRIP} > $@
-
-out/number-3.out: src/number-3.roc
-	cat $< | roc repl 2>&1 | ${STRIP} > $@
-
-out/nested-func-call.out: src/nested-func-call.roc
-	cat $< | roc repl 2>&1 | ${STRIP} > $@
-
-out/var-def.out: src/var-def.roc
-	cat $< | roc repl 2>&1 | ${STRIP} > $@
-
-out/var-redef.out: src/var-def.roc src/var-redef.roc
+out/interp-var-redef.out: src/interp-var-def.roc src/interp-var-redef.roc
 	cat $^ | roc repl 2>&1 | ${STRIP} | tail -n+2 | head -n1 > $@

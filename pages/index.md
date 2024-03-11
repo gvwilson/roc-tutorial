@@ -17,7 +17,7 @@
 -   Run `roc repl` at the command line
 -   Character string evaluates to itself
 
-[% multi src/hello-roc.roc out/hello-roc.out %]
+[% multi src/interp-hello-roc.roc out/interp-hello-roc.out %]
 
 -   The `Str` after the colon tells us the type of the value
 -   Roc cares a *lot* about types
@@ -25,7 +25,7 @@
 <!-- ---------------------------------------------------------------- -->
 [% section_break class="topic" title="Numbers" %]
 
-[% multi src/number-3.roc out/number-3.out %]
+[% multi src/interp-number-3.roc out/interp-number-3.out %]
 
 -   3 is a `Num *`
     -   `Num` is short for "number"
@@ -38,16 +38,16 @@
 -   Assigning a value to a name creates a variable
     -   The value of the expression is automatically echoed
 
-[% multi src/var-def.roc out/var-def.out %]
+[% multi src/interp-var-def.roc out/interp-var-def.out %]
 
 -   But all "variables" are actually constants
 
-[% multi src/var-redef.roc out/var-redef.out %]
+[% multi src/interp-var-redef.roc out/interp-var-redef.out %]
 
 <!-- ---------------------------------------------------------------- -->
 [% section_break class="topic" title="Arithmetic" %]
 
-[% multi src/arithmetic.roc out/arithmetic.out %]
+[% multi src/interp-arithmetic.roc out/interp-arithmetic.out %]
 
 -   Roc respects the usual precedence rules for arithmetic
 -   Result is `Frac` because division creates a fractional number
@@ -56,16 +56,16 @@
 <!-- ---------------------------------------------------------------- -->
 [% section_break class="topic" title="Functions" %]
 
-[% multi src/call-max.roc out/call-max.out %]
+[% multi src/interp-call-max.roc out/interp-call-max.out %]
 
 -   Don't need parentheses…
 -   …except to disambiguate
 
-[% multi src/call-max-add.roc out/call-max-add.out %]
+[% multi src/interp-call-max-add.roc out/interp-call-max-add.out %]
 
 -   Consider:
 
-[% multi src/nested-func-call.roc out/nested-func-call.out %]
+[% multi src/interp-nested-func-call.roc out/interp-nested-func-call.out %]
 
 -   Looks like we're passing `Num.max`, 3, and 5 as arguments to `Str.concat`
 
@@ -75,7 +75,7 @@
 -   Works as it does in most modern languages
     -   Your responsibility to convert interpolated values to text
 
-[% multi src/interpolation.roc out/interpolation.out %]
+[% multi src/interp-interpolation.roc out/interp-interpolation.out %]
 
 <!-- ---------------------------------------------------------------- -->
 [% section_break class="topic" title="Defining Functions" %]
@@ -83,7 +83,7 @@
 -   Use `\` followed by parameters (with no space after `\`)
 -   Assign result to a name
 
-[% multi src/max3.roc out/max3.out %]
+[% multi src/interp-max3.roc out/interp-max3.out %]
 
 <!-- ---------------------------------------------------------------- -->
 [% section_break class="aside" title="Appendices" %]

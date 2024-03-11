@@ -61,12 +61,12 @@
 <li>Run <code>roc repl</code> at the command line</li>
 <li>Character string evaluates to itself</li>
 </ul>
-<p class="inclusion"><a href="src/hello-roc.roc">src/hello-roc.roc</a></p>
+<p class="inclusion"><a href="src/interp-hello-roc.roc">src/interp-hello-roc.roc</a></p>
 <div class="language-roc">
 <div class="highlight"><pre><span></span><code>&quot;Hello, Roc&quot;
 </code></pre></div>
 </div>
-<p class="inclusion"><a href="out/hello-roc.out">out/hello-roc.out</a></p>
+<p class="inclusion"><a href="out/interp-hello-roc.out">out/interp-hello-roc.out</a></p>
 <div class="language-plaintext">
 <div class="highlight"><pre><span></span><code>&quot;Hello, Roc&quot; : Str
 </code></pre></div>
@@ -79,12 +79,12 @@
 </section>
 <section class="topic">
 <h2 class="topic">2: Numbers</h2>
-<p class="inclusion"><a href="src/number-3.roc">src/number-3.roc</a></p>
+<p class="inclusion"><a href="src/interp-number-3.roc">src/interp-number-3.roc</a></p>
 <div class="language-roc">
 <div class="highlight"><pre><span></span><code>3
 </code></pre></div>
 </div>
-<p class="inclusion"><a href="out/number-3.out">out/number-3.out</a></p>
+<p class="inclusion"><a href="out/interp-number-3.out">out/interp-number-3.out</a></p>
 <div class="language-plaintext">
 <div class="highlight"><pre><span></span><code>3 : Num *
 </code></pre></div>
@@ -107,12 +107,12 @@
 </ul>
 </li>
 </ul>
-<p class="inclusion"><a href="src/var-def.roc">src/var-def.roc</a></p>
+<p class="inclusion"><a href="src/interp-var-def.roc">src/interp-var-def.roc</a></p>
 <div class="language-roc">
 <div class="highlight"><pre><span></span><code>value = &quot;high&quot;
 </code></pre></div>
 </div>
-<p class="inclusion"><a href="out/var-def.out">out/var-def.out</a></p>
+<p class="inclusion"><a href="out/interp-var-def.out">out/interp-var-def.out</a></p>
 <div class="language-plaintext">
 <div class="highlight"><pre><span></span><code>&quot;high&quot; : Str
 </code></pre></div>
@@ -120,12 +120,12 @@
 <ul>
 <li>But all &ldquo;variables&rdquo; are actually constants</li>
 </ul>
-<p class="inclusion"><a href="src/var-redef.roc">src/var-redef.roc</a></p>
+<p class="inclusion"><a href="src/interp-var-redef.roc">src/interp-var-redef.roc</a></p>
 <div class="language-roc">
 <div class="highlight"><pre><span></span><code>value = &quot;low&quot;
 </code></pre></div>
 </div>
-<p class="inclusion"><a href="out/var-redef.out">out/var-redef.out</a></p>
+<p class="inclusion"><a href="out/interp-var-redef.out">out/interp-var-redef.out</a></p>
 <div class="language-plaintext">
 <div class="highlight"><pre><span></span><code>thread &#39;main&#39; panicked at &#39;not yet implemented&#39;, crates/compiler/mono/src/ir.rs:2742:23
 </code></pre></div>
@@ -134,12 +134,12 @@
 </section>
 <section class="topic">
 <h2 class="topic">4: Arithmetic</h2>
-<p class="inclusion"><a href="src/arithmetic.roc">src/arithmetic.roc</a></p>
+<p class="inclusion"><a href="src/interp-arithmetic.roc">src/interp-arithmetic.roc</a></p>
 <div class="language-roc">
 <div class="highlight"><pre><span></span><code>5 - 1 * 3 + 4 / 2
 </code></pre></div>
 </div>
-<p class="inclusion"><a href="out/arithmetic.out">out/arithmetic.out</a></p>
+<p class="inclusion"><a href="out/interp-arithmetic.out">out/interp-arithmetic.out</a></p>
 <div class="language-plaintext">
 <div class="highlight"><pre><span></span><code>4 : Frac *
 </code></pre></div>
@@ -155,12 +155,12 @@
 </section>
 <section class="topic">
 <h2 class="topic">5: Functions</h2>
-<p class="inclusion"><a href="src/call-max.roc">src/call-max.roc</a></p>
+<p class="inclusion"><a href="src/interp-call-max.roc">src/interp-call-max.roc</a></p>
 <div class="language-roc">
 <div class="highlight"><pre><span></span><code>Num.max 3 5
 </code></pre></div>
 </div>
-<p class="inclusion"><a href="out/call-max.out">out/call-max.out</a></p>
+<p class="inclusion"><a href="out/interp-call-max.out">out/interp-call-max.out</a></p>
 <div class="language-plaintext">
 <div class="highlight"><pre><span></span><code>5 : Num *
 </code></pre></div>
@@ -169,13 +169,13 @@
 <li>Don&rsquo;t need parentheses…</li>
 <li>…except to disambiguate</li>
 </ul>
-<p class="inclusion"><a href="src/call-max-add.roc">src/call-max-add.roc</a></p>
+<p class="inclusion"><a href="src/interp-call-max-add.roc">src/interp-call-max-add.roc</a></p>
 <div class="language-roc">
 <div class="highlight"><pre><span></span><code>Num.max 5 3 + 2
 Num.max 5 (3 + 2)
 </code></pre></div>
 </div>
-<p class="inclusion"><a href="out/call-max-add.out">out/call-max-add.out</a></p>
+<p class="inclusion"><a href="out/interp-call-max-add.out">out/interp-call-max-add.out</a></p>
 <div class="language-plaintext">
 <div class="highlight"><pre><span></span><code>7 : Num *
 
@@ -185,12 +185,12 @@ Num.max 5 (3 + 2)
 <ul>
 <li>Consider:</li>
 </ul>
-<p class="inclusion"><a href="src/nested-func-call.roc">src/nested-func-call.roc</a></p>
+<p class="inclusion"><a href="src/interp-nested-func-call.roc">src/interp-nested-func-call.roc</a></p>
 <div class="language-roc">
 <div class="highlight"><pre><span></span><code>Str.concat &quot;Answer: &quot; Num.max 3 5
 </code></pre></div>
 </div>
-<p class="inclusion"><a href="out/nested-func-call.out">out/nested-func-call.out</a></p>
+<p class="inclusion"><a href="out/interp-nested-func-call.out">out/interp-nested-func-call.out</a></p>
 <div class="language-plaintext">
 <div class="highlight"><pre><span></span><code>── TOO MANY ARGS ───────────────────────────────────────────────────────────────
 
@@ -215,12 +215,12 @@ Are there any missing commas? Or missing parentheses?
 </ul>
 </li>
 </ul>
-<p class="inclusion"><a href="src/interpolation.roc">src/interpolation.roc</a></p>
+<p class="inclusion"><a href="src/interp-interpolation.roc">src/interp-interpolation.roc</a></p>
 <div class="language-roc">
 <div class="highlight"><pre><span></span><code>&quot;Answer: $(Num.toStr (Num.max 3 5))&quot;
 </code></pre></div>
 </div>
-<p class="inclusion"><a href="out/interpolation.out">out/interpolation.out</a></p>
+<p class="inclusion"><a href="out/interp-interpolation.out">out/interp-interpolation.out</a></p>
 <div class="language-plaintext">
 <div class="highlight"><pre><span></span><code>&quot;Answer: 5&quot; : Str
 </code></pre></div>
@@ -233,14 +233,14 @@ Are there any missing commas? Or missing parentheses?
 <li>Use <code>\</code> followed by parameters (with no space after <code>\</code>)</li>
 <li>Assign result to a name</li>
 </ul>
-<p class="inclusion"><a href="src/max3.roc">src/max3.roc</a></p>
+<p class="inclusion"><a href="src/interp-max3.roc">src/interp-max3.roc</a></p>
 <div class="language-roc">
 <div class="highlight"><pre><span></span><code>max3 = \a, b, c -&gt;
     Num.max a (Num.max b c)
 max3 5 2 7
 </code></pre></div>
 </div>
-<p class="inclusion"><a href="out/max3.out">out/max3.out</a></p>
+<p class="inclusion"><a href="out/interp-max3.out">out/interp-max3.out</a></p>
 <div class="language-plaintext">
 <div class="highlight"><pre><span></span><code>&lt;function&gt; : Num a, Num a, Num a -&gt; Num a
 
