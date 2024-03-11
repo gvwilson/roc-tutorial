@@ -70,6 +70,14 @@
 -   Looks like we're passing `Num.max`, 3, and 5 as arguments to `Str.concat`
 
 <!-- ---------------------------------------------------------------- -->
+[% section_break class="topic" title="Interpolation" %]
+
+-   Works as it does in most modern languages
+    -   Your responsibility to convert interpolated values to text
+
+[% multi src/interpolation.roc out/interpolation.out %]
+
+<!-- ---------------------------------------------------------------- -->
 [% section_break class="aside" title="Appendices" %]
 
 ### Terms
