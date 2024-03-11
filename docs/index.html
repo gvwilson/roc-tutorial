@@ -210,7 +210,10 @@ Are there any missing commas? Or missing parentheses?
 <section class="topic">
 <h2 class="topic">6: Interpolation</h2>
 <ul>
-<li>Works as it does in most modern languages</li>
+<li>Works as it does in most modern languages<ul>
+<li>Your responsibility to convert interpolated values to text</li>
+</ul>
+</li>
 </ul>
 <p class="inclusion"><a href="src/interpolation.roc">src/interpolation.roc</a></p>
 <div class="language-roc">
@@ -220,6 +223,28 @@ Are there any missing commas? Or missing parentheses?
 <p class="inclusion"><a href="out/interpolation.out">out/interpolation.out</a></p>
 <div class="language-plaintext">
 <div class="highlight"><pre><span></span><code>&quot;Answer: 5&quot; : Str
+</code></pre></div>
+</div>
+<!-- ---------------------------------------------------------------- -->
+</section>
+<section class="topic">
+<h2 class="topic">7: Defining Functions</h2>
+<ul>
+<li>Use <code>\</code> followed by parameters (with no space after <code>\</code>)</li>
+<li>Assign result to a name</li>
+</ul>
+<p class="inclusion"><a href="src/max3.roc">src/max3.roc</a></p>
+<div class="language-roc">
+<div class="highlight"><pre><span></span><code>max3 = \a, b, c -&gt;
+    Num.max a (Num.max b c)
+max3 5 2 7
+</code></pre></div>
+</div>
+<p class="inclusion"><a href="out/max3.out">out/max3.out</a></p>
+<div class="language-plaintext">
+<div class="highlight"><pre><span></span><code>&lt;function&gt; : Num a, Num a, Num a -&gt; Num a
+
+7 : Num *
 </code></pre></div>
 </div>
 <!-- ---------------------------------------------------------------- -->

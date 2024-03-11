@@ -33,6 +33,9 @@ out/hello-roc.out: src/hello-roc.roc
 out/interpolation.out: src/interpolation.roc
 	cat $< | roc repl 2>&1 | ${STRIP} > $@
 
+out/max3.out: src/max3.roc
+	cat $< | roc repl 2>&1 | ${STRIP} > $@
+
 out/number-3.out: src/number-3.roc
 	cat $< | roc repl 2>&1 | ${STRIP} > $@
 

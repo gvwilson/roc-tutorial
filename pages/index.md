@@ -78,6 +78,14 @@
 [% multi src/interpolation.roc out/interpolation.out %]
 
 <!-- ---------------------------------------------------------------- -->
+[% section_break class="topic" title="Defining Functions" %]
+
+-   Use `\` followed by parameters (with no space after `\`)
+-   Assign result to a name
+
+[% multi src/max3.roc out/max3.out %]
+
+<!-- ---------------------------------------------------------------- -->
 [% section_break class="aside" title="Appendices" %]
 
 ### Terms
