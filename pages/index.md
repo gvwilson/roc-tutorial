@@ -31,7 +31,19 @@
     -   `Num` is short for "number"
     -   `*` means this is a [%g wildcard_type "wildcard type" %]
 -   Compatible with more specific numeric types `Int` and `Frac`
--   We're going to see a lot of wildcards
+
+<!-- ---------------------------------------------------------------- -->
+[% section_break class="topic" title="Variables" %]
+
+-   Assigning a value to a name creates a variable
+    -   The value of the expression is automatically echoed
+
+[% multi "src/var-def.roc" "out/var-def.out" %]
+
+-   But all "variables" are actually constants
+
+[% single "src/var-redef.roc" %]
+[% single "out/var-redef.out" %]
 
 <!-- ---------------------------------------------------------------- -->
 [% section_break class="aside" title="Appendices" %]

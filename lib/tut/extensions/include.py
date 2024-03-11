@@ -7,6 +7,7 @@ import util
 
 COMMENT = {
     "py": "#",
+    "roc": "#",
     "sql": "--",
 }
 
