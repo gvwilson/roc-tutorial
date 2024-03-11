@@ -18,14 +18,17 @@ release:
 .PHONY: run
 run: ${OUT_FILES}
 
+out/arithmetic.out: src/arithmetic.roc
+	cat $< | roc repl 2>&1 | ${STRIP} > $@
+
 out/hello-roc.out: src/hello-roc.roc
-	@cat $< | roc repl 2>&1 | ${STRIP} > $@
+	cat $< | roc repl 2>&1 | ${STRIP} > $@
 
 out/number-3.out: src/number-3.roc
-	@cat $< | roc repl 2>&1 | ${STRIP} > $@
+	cat $< | roc repl 2>&1 | ${STRIP} > $@
 
 out/var-def.out: src/var-def.roc
-	@cat $< | roc repl 2>&1 | ${STRIP} > $@
+	cat $< | roc repl 2>&1 | ${STRIP} > $@
 
 out/var-redef.out: src/var-def.roc src/var-redef.roc
-	@cat $^ | roc repl 2>&1 | ${STRIP} | tail -n+2 | head -n1 > $@
+	cat $^ | roc repl 2>&1 | ${STRIP} | tail -n+2 | head -n1 > $@

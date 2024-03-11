@@ -46,6 +46,15 @@
 [% single "out/var-redef.out" %]
 
 <!-- ---------------------------------------------------------------- -->
+[% section_break class="topic" title="Arithmetic" %]
+
+[% multi "src/arithmetic.roc" "out/arithmetic.out" %]
+
+-   Roc respects the usual precedence rules for arithmetic
+-   Result is `Frac` because division creates a fractional number
+    -   And `Num` combined with `Frac` is `Frac`
+
+<!-- ---------------------------------------------------------------- -->
 [% section_break class="aside" title="Appendices" %]
 
 ### Terms
