@@ -23,3 +23,7 @@ out/interp-%.out: src/interp-%.roc
 
 out/interp-var-redef.out: src/interp-var-def.roc src/interp-var-redef.roc
 	cat $^ | roc repl 2>&1 | ${STRIP} | tail -n+2 | head -n1 > $@
+
+out/%.out: src/%.roc
+	roc dev $< 2>&1 > $@
+	rm -f src/$*

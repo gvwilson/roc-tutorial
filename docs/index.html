@@ -249,6 +249,39 @@ max3 5 2 7
 </div>
 <!-- ---------------------------------------------------------------- -->
 </section>
+<section class="topic">
+<h2 class="topic">8: First Application</h2>
+<p class="inclusion"><a href="src/first-app.roc">src/first-app.roc</a></p>
+<div class="language-roc">
+<div class="highlight"><pre><span></span><code>app &quot;first&quot;
+    packages { cli: &quot;https://github.com/roc-lang/basic-cli/releases/download/0.8.1/x8URkvfyi9I0QhmVG98roKBUs_AZRkLFwFJVJ3942YA.tar.br&quot; }
+    imports [cli.Stdout]
+    provides [main] to cli
+
+main =
+    Stdout.line &quot;First application&quot;
+</code></pre></div>
+</div>
+<p class="inclusion"><a href="out/first-app.out">out/first-app.out</a></p>
+<div class="language-plaintext">
+<div class="highlight"><pre><span></span><code>First application
+</code></pre></div>
+</div>
+<ul>
+<li>Downloads the <code>basic-cli</code> <a href="#g:platform">platform</a> the first time it runs</li>
+<li>Uses the cached version after that</li>
+<li>We&rsquo;ll go through the details but:<ul>
+<li>Create an application called <code>first</code></li>
+<li>Get the <code>basic-cli</code> platform as a package called <code>cli</code></li>
+<li>Get <code>Stdout</code> (standard output) from that package</li>
+<li>Provide our <code>main</code> function to <code>cli</code></li>
+<li>Define the <code>main</code> we&rsquo;re providing</li>
+</ul>
+</li>
+<li>Yeah, it feels a bit like Java&rsquo;s <code>public static void main</code></li>
+</ul>
+<!-- ---------------------------------------------------------------- -->
+</section>
 <section class="aside">
 <h2 class="aside">Appendices</h2>
 <h3>Terms</h3>
@@ -271,7 +304,7 @@ max3 5 2 7
   <a href="license/"><i class="fab fa-creative-commons-by" aria-hidden="true" title="license"></i></a>
   &middot;
   <i class="fas fa-clock"></i>
-  <time datetime="2024-03-11">Last built 2024-03-11</time>
+  <time datetime="2024-03-12">Last built 2024-03-12</time>
   &middot;
   <i class="fas fa-user-check"></i> 100% human content
 </footer>

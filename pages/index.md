@@ -86,6 +86,21 @@
 [% multi src/interp-max3.roc out/interp-max3.out %]
 
 <!-- ---------------------------------------------------------------- -->
+[% section_break class="topic" title="First Application" %]
+
+[% multi src/first-app.roc out/first-app.out %]
+
+-   Downloads the `basic-cli` [%g platform "platform" %] the first time it runs
+-   Uses the cached version after that
+-   We'll go through the details but:
+    -   Create an application called `first`
+    -   Get the `basic-cli` platform as a package called `cli`
+    -   Get `Stdout` (standard output) from that package
+    -   Provide our `main` function to `cli`
+    -   Define the `main` we're providing
+-   Yeah, it feels a bit like Java's `public static void main`
+
+<!-- ---------------------------------------------------------------- -->
 [% section_break class="aside" title="Appendices" %]
 
 ### Terms
