@@ -24,6 +24,15 @@ out/interp-%.out: src/interp-%.roc
 out/interp-var-redef.out: src/interp-var-def.roc src/interp-var-redef.roc
 	cat $^ | roc repl 2>&1 | ${STRIP} | tail -n+2 | head -n1 > $@
 
-out/%.out: src/%.roc
-	roc dev $< 2>&1 > $@
-	rm -f src/$*
+out/%.out: tmp/%
+	@mkdir -p tmp
+	tmp/$* 2>&1 > $@
+
+tmp/%: src/%.roc
+	roc build --output $@ $<
+
+out/order-func-3-bad-name.out: src/order-func-3-bad-name.roc
+	roc dev $< 2>&1 | ${STRIP} > $@
+
+out/order-func-3-stdout.out: src/order-func-3-stdout.roc
+	roc dev $< 2>&1 | ${STRIP} > $@

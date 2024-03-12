@@ -108,6 +108,24 @@
 -   Note that `else if` is just an `if` inside an `else`
 
 <!-- ---------------------------------------------------------------- -->
+[% section_break class="topic" title="Naming" %]
+
+[% multi src/order-func-3-bad-name.roc out/order-func-3-bad-name.out %]
+
+-   Use [%g camel_case "camelCase" %] instead
+
+[% multi src/order-func-3.roc out/order-func-3.out %]
+
+<!-- ---------------------------------------------------------------- -->
+[% section_break class="aside" title="Tasks" %]
+
+[% single src/order-func-3-stdout.roc %]
+
+-   Produces a page of error messages
+-   Problem is that `Stdout.line` is a [%g task "task" %], not a function
+-   We'll explore those later
+
+<!-- ---------------------------------------------------------------- -->
 [% section_break class="aside" title="Appendices" %]
 
 ### Terms

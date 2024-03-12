@@ -1,0 +1,26 @@
+
+── NAMING PROBLEM in src/order-func-3-bad-name.roc ─────────────────────────────
+
+I am trying to parse an identifier here:
+
+15│  try_order = \a ->
+        ^
+
+Underscores are not allowed in identifiers. Use camelCase instead!
+
+
+── SYNTAX PROBLEM in src/order-func-3-bad-name.roc ─────────────────────────────
+
+Underscores are not allowed in identifier names:
+
+22│      Stdout.line (try_order 3)
+                      ^^^^^^^^^
+
+I recommend using camelCase. It's the standard style in Roc code!
+
+────────────────────────────────────────────────────────────────────────────────
+
+2 errors and 1 warning found in 21 ms.
+
+You can run the program anyway with roc run src/order-func-3-bad-name.roc
+

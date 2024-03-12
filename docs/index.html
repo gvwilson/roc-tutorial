@@ -308,6 +308,88 @@ main =
 </ul>
 <!-- ---------------------------------------------------------------- -->
 </section>
+<section class="topic">
+<h2 class="topic">10: Naming</h2>
+<p class="inclusion"><a href="src/order-func-3-bad-name.roc">src/order-func-3-bad-name.roc</a></p>
+<div class="language-roc">
+<div class="highlight"><pre><span></span><code>try_order = \a -&gt;
+    left = Num.toStr (order a 5)
+    both = Num.toStr (order a a)
+    right = Num.toStr (order 5 a)
+    &quot;left $(left) both $(both) right $(right)&quot;
+
+main =
+    Stdout.line (try_order 3)
+</code></pre></div>
+</div>
+<p class="inclusion"><a href="out/order-func-3-bad-name.out">out/order-func-3-bad-name.out</a></p>
+<div class="language-plaintext">
+<div class="highlight"><pre><span></span><code>── NAMING PROBLEM in src/order-func-3-bad-name.roc ─────────────────────────────
+
+I am trying to parse an identifier here:
+
+15│  try_order = \a -&gt;
+        ^
+
+Underscores are not allowed in identifiers. Use camelCase instead!
+
+
+── SYNTAX PROBLEM in src/order-func-3-bad-name.roc ─────────────────────────────
+
+Underscores are not allowed in identifier names:
+
+22│      Stdout.line (try_order 3)
+                      ^^^^^^^^^
+
+I recommend using camelCase. It&#39;s the standard style in Roc code!
+
+────────────────────────────────────────────────────────────────────────────────
+
+2 errors and 1 warning found in 21 ms.
+
+You can run the program anyway with roc run src/order-func-3-bad-name.roc
+</code></pre></div>
+</div>
+<ul>
+<li>Use <a href="#g:camel_case">camelCase</a> instead</li>
+</ul>
+<p class="inclusion"><a href="src/order-func-3.roc">src/order-func-3.roc</a></p>
+<div class="language-roc">
+<div class="highlight"><pre><span></span><code>tryOrder = \a -&gt;
+    left = Num.toStr (order a 5)
+    both = Num.toStr (order a a)
+    right = Num.toStr (order 5 a)
+    &quot;left $(left) both $(both) right $(right)&quot;
+
+main =
+    Stdout.line (tryOrder 3)
+</code></pre></div>
+</div>
+<p class="inclusion"><a href="out/order-func-3.out">out/order-func-3.out</a></p>
+<div class="language-plaintext">
+<div class="highlight"><pre><span></span><code>left -1 both 0 right -1
+</code></pre></div>
+</div>
+<!-- ---------------------------------------------------------------- -->
+</section>
+<section class="aside">
+<h2 class="aside">Tasks</h2>
+<p class="inclusion"><a href="src/order-func-3-stdout.roc">src/order-func-3-stdout.roc</a></p>
+<div class="language-roc">
+<div class="highlight"><pre><span></span><code>tryOrder = \a -&gt;
+    Stdout.line (Num.toStr (order a 5))
+
+main =
+    tryOrder
+</code></pre></div>
+</div>
+<ul>
+<li>Produces a page of error messages</li>
+<li>Problem is that <code>Stdout.line</code> is a <a href="#g:task">task</a>, not a function</li>
+<li>We&rsquo;ll explore those later</li>
+</ul>
+<!-- ---------------------------------------------------------------- -->
+</section>
 <section class="aside">
 <h2 class="aside">Appendices</h2>
 <h3>Terms</h3>
