@@ -101,6 +101,13 @@
 -   Yeah, it feels a bit like Java's `public static void main`
 
 <!-- ---------------------------------------------------------------- -->
+[% section_break class="topic" title="Conditionals" %]
+
+[% multi src/order-func.roc out/order-func.out %]
+
+-   Note that `else if` is just an `if` inside an `else`
+
+<!-- ---------------------------------------------------------------- -->
 [% section_break class="aside" title="Appendices" %]
 
 ### Terms
