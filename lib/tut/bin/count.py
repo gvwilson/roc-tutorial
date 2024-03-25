@@ -4,7 +4,7 @@ import shortcodes
 import sys
 
 
-@shortcodes.register("double")
+@shortcodes.register("inc")
 def double(pargs, kwargs, context):
     context["inclusion"] += 1
 
@@ -15,18 +15,13 @@ def section_break(pargs, kwargs, context):
 
 
 @shortcodes.register("section_end")
-def section_break(pargs, kwargs, context):
+def section_end(pargs, kwargs, context):
     pass
 
 
 @shortcodes.register("section_start")
 def section_start(pargs, kwargs, context):
     context[kwargs["class"]] += 1
-
-
-@shortcodes.register("single")
-def single(pargs, kwargs, context):
-    context["inclusion"] += 1
 
 
 parser = shortcodes.Parser(ignore_unknown=True)

@@ -20,7 +20,7 @@ I recommend using camelCase. It's the standard style in Roc code!
 
 ────────────────────────────────────────────────────────────────────────────────
 
-2 errors and 1 warning found in 21 ms.
+2 errors and 1 warning found in 15 ms.
 
 You can run the program anyway with roc run src/order-func-3-bad-name.roc
 

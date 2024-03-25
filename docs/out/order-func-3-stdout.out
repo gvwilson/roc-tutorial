@@ -43,7 +43,7 @@ an instance of this opaque type by doing @Age 23.
 
 ────────────────────────────────────────────────────────────────────────────────
 
-2 errors and 0 warnings found in 21 ms.
+2 errors and 0 warnings found in 15 ms.
 
 You can run the program anyway with roc run src/order-func-3-stdout.roc
 
